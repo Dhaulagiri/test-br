@@ -1,0 +1,33 @@
+{
+  "name": "test-br",
+  "scripts": {
+  },
+  "env": {
+    "BUILDPACK_URL": {
+      "required": true
+    },
+    "HEROKU_POSTGRESQL_GOLD_URL": {
+      "required": true
+    },
+    "HEROKU_REDIS_MAROON_URL": {
+      "required": true
+    },
+    "SENDGRID_PASSWORD": {
+      "required": true
+    },
+    "SENDGRID_USERNAME": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "heroku-redis",
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ]
+}
